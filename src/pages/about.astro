@@ -1,21 +1,21 @@
 ---
-
+const pageTitle = "About";
 ---
-
+import '../styles/global.css';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">Home</a>
 		<a href="/about/">About</a>
         <a href="/products/">Products</a>
 
-		<h1>About</h1>
+		<h1>{pageTitle}</h1>
 
         <p>The Crocheted Creature is a crochet business started by Lilia in 2025</p>
 	</body>
