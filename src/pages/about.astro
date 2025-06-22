@@ -1,5 +1,12 @@
 ---
 const pageTitle = "About";
+
+const identity = {
+    firstName: "Lilia",
+    country: "United States",
+    hobbies: ["coding", "drawing", "singing"],
+};
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Art"]
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
@@ -19,6 +26,20 @@ import Footer from '../components/Footer.astro';
 		<h1>{pageTitle}</h1>
 
         <p>The Crocheted Creature is a crochet business started by Lilia in 2025</p>
+
+        <h2>About the Owner</h2>
+        <p>Here are a few facts about me:</p>
+        <ul>
+            <li>My name is {identity.firstName}.</li>
+            <li>I live in {identity.country}.</li>
+            {identity.hobbies.length >= 2 &&
+                <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+            }
+        </ul>
+        <p>My skills are:</p>
+        <ul>
+            {skills.map((skill) => <li>{skill}</li>)}
+        </ul>
 
         <Footer />
 	</body>
