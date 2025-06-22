@@ -7,6 +7,8 @@ const identity = {
     hobbies: ["coding", "drawing", "singing"],
 };
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Art"]
+
+const skillColor = "navy";
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
@@ -19,6 +21,16 @@ import Footer from '../components/Footer.astro';
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+        <style>
+            h1 {
+                color: purple;
+                font-size: 4rem;
+            }
+            .skill {
+                color: var(--skillColor);
+                font-weight: bold;
+            }
+        </style>
 	</head>
 	<body>
         <Navigation />
@@ -38,7 +50,7 @@ import Footer from '../components/Footer.astro';
         </ul>
         <p>My skills are:</p>
         <ul>
-            {skills.map((skill) => <li>{skill}</li>)}
+            {skills.map((skill) => <li class="skill">{skill}</li>)}
         </ul>
 
         <Footer />
