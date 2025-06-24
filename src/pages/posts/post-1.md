@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Why on earth is there a blog here?'
 pubDate: 2025-06-21
 description: 'This blog post explains why on earth I created a blog for this site.'
@@ -8,15 +9,12 @@ image:
     alt: 'a chain of pink yarn on a crochet hook'
 tags: ["crochet"]
 ---
-# Why on earth is there a blog here?
-
-Published on: 2025-06-21
 
 Well, that's a _great_ question! Why does a crochet business have a blog?
 
 ## The Reason
 
-I wanted this site to have a blog becuase I wanted to provide updates on the progress of my business without having to fight for screen-time on social media. Is it really that simple? Yeah, it is. 
+I wanted this site to have a blog becuase I wanted to provide updates on the progress of my business without having to fight for screen-time on social media. Is it really that simple? Yeah, it is.
 
 ## What I'll be posting about
 
