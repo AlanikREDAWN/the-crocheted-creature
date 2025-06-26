@@ -7,7 +7,7 @@ author: 'Lilia'
 image:
     url: 'https://hc-cdn.hel1.your-objectstorage.com/s/v3/8fc23f936faf4ab390ed4ccb5d88acb58ecbf86e_knitted_piece_and_yarn.jpg'
     alt: 'a chain of pink yarn on a crochet hook'
-tags: ["crochet"]
+tags: ["crochet", "progress", "update"]
 ---
 
 Well, that's a _great_ question! Why does a crochet business have a blog?
