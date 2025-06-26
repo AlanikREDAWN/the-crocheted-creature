@@ -11,29 +11,8 @@ import Footer from '../components/Footer.astro';
   <p>This is where I will post about my journey learning Astro.</p>
   <ul>
     
-    {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+    {allPosts.map((post: any, i) => (
+        <li><a href={post.url}>{post.frontmatter.title}</a></li>
+    ))}
   </ul>
 </BaseLayout>
-<!-- <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Header />
-
-		<h1>{pageTitle}</h1>
-
-        <ul>
-            {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
-        </ul>
-
-        <Footer />
-        <script>
-			import "../scripts/menu.js";
-		</script>
-	</body>
-</html> -->
