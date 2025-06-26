@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
-    "astro": "^5.10.0"
+    "astro": "^5.10.0",
+    "moment": "^2.30.1"
   }
 }
