@@ -1,24 +1,24 @@
 ---
 const pageTitle = "Blog";
-// const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 
-interface Frontmatter {
-  title: string;
-  // add other fields if needed
-}
+// interface Frontmatter {
+//   title: string;
+//   // add other fields if needed
+// }
 
-interface Post {
-  frontmatter: Frontmatter;
-}
+// interface Post {
+//   frontmatter: Frontmatter;
+// }
 
-const postImports = import.meta.glob<Post>('./posts/*.md', { eager: true });
+// const postImports = import.meta.glob<Post>('./posts/*.md', { eager: true });
 
-const allPosts = Object.entries(postImports).map(([path, post]) => {
-  return {
-    url: path.replace('./posts', '/blog').replace('.md', ''),
-    frontmatter: post.frontmatter,
-  };
-});
+// const allPosts = Object.entries(postImports).map(([path, post]) => {
+//   return {
+//     url: path.replace('./posts', '/blog').replace('.md', ''),
+//     frontmatter: post.frontmatter,
+//   };
+// });
 
 import BlogPost from '../components/BlogPost.astro';
 import '../styles/global.css';
@@ -40,7 +40,7 @@ import Footer from '../components/Footer.astro';
 		<h1>{pageTitle}</h1>
 
         <ul>
-            {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+            {allPosts.map((post: any, i) => <BlogPost key={post.url} url={post.url} title={post.frontmatter.title} />)}
         </ul>
 
         <Footer />
