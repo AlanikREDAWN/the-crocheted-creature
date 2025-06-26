@@ -11,7 +11,7 @@ import Footer from '../components/Footer.astro';
   <p>This is where I will post about my journey learning Astro.</p>
   <ul>
     
-    {allPosts.map((post: any, i) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+    {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
   </ul>
 </BaseLayout>
 <!-- <html lang="en">
