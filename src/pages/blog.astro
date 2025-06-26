@@ -23,7 +23,7 @@ import Footer from '../components/Footer.astro';
 
         <ul>
             {
-            allPosts.map((post) => (
+            allPosts.map((post: any) => (
                 <BlogPost url={post.url} title={post.frontmatter.title} />
             ))
   }
