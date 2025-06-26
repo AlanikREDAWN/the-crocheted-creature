@@ -1,8 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from "../components/Greeting";
 const pageTitle = "Home";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>My awesome blog subtitle</h2>
+	<Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there", "Hallo", "Përshëndetje", "Iwi selami newi", "Marhaba", "Barev", "Kamisaki", "Salam", "Kaixo", "Vitaju", "Hyālō", "Zdravo", "Zdraveĭte", "Haallo", "Nǐ hǎo", "Hola", "Kamusta", "Moni", "Bonghjornu", "Zdravo", "Ahoj", "Hej", "Hallo", "Hello", "Tere", "Hello", "Salām", "Bula", "Kumusta", "Hei", "Bonjour", "Dia dhuit", "Ola", "Gamarjoba", "Guten tag", "Geia", "Mba'éichapa", "Bonjou", "Aloha", "Shalom", "Namaste", "Nyob zoo", "Szia", "Halló", "Ndewo", "Hello", "Halo", "Ciao", "Konichiwa", "Sälemetsiz be", "Suostei", "Mwaramutse", "Anyeong haseyo", "Slav", "Sabaidi", "Salve", "Sveiki", "Moien", "Salama", "Selamat pagi", "Bongu", "Nǐ hǎo", "Kia ora", "Namaskāra", "Sain uu", "Niltze Tialli Pialli", "Ya’at’eeh", "Namaskāra", "Hei", "Salam", "Cześć", "Olá", "Sata srī akāla", "Akkam", "Allianchu", "Bunâ", "Privet", "Talofa", "Thobela", "Zdravo", "Dumela", "Ahoj", "Zdravo", "Hello", "Hola", "Jambo", "Hallå", "Kamusta", "Ia Orana", "Li-hó", "Vanakkam", "S̄wạs̄dī", "Tashi delek", "Mālō e lelei", "Avuxeni", "Merhaba", "Privit", "Assalāmu Alaykum", "Salom", "Xin chào", "Helo", "Molo", "Nuqneh", "Kaltxì"]} />
 </BaseLayout>
