@@ -1,6 +1,25 @@
 ---
 const pageTitle = "Blog";
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+// const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+
+interface Frontmatter {
+  title: string;
+  // add other fields if needed
+}
+
+interface Post {
+  frontmatter: Frontmatter;
+}
+
+const postImports = import.meta.glob<Post>('./posts/*.md', { eager: true });
+
+const allPosts = Object.entries(postImports).map(([path, post]) => {
+  return {
+    url: path.replace('./posts', '/blog').replace('.md', ''),
+    frontmatter: post.frontmatter,
+  };
+});
+
 import BlogPost from '../components/BlogPost.astro';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
