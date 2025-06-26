@@ -40,7 +40,7 @@ import Footer from '../components/Footer.astro';
 		<h1>{pageTitle}</h1>
 
         <ul>
-            {allPosts.map((post: any, i) => <BlogPost key={post.url} url={post.url} title={post.frontmatter.title} />)}
+            {allPosts.map((post: any, i) => <BlogPost key={i} url={post.url} title={post.frontmatter.title} />)}
         </ul>
 
         <Footer />
